@@ -1,0 +1,9 @@
+{
+    "gado": [
+        {"numero": "000", "peso": 300, "cotacao": 230},
+        {"numero": "001", "peso": 280, "cotacao": 220}
+    ],
+    "cotacoes": [
+        {"data": "2025-01-16", "valor": 220}
+    ]
+}
