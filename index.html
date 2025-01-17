@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rei do Gado</title>
+    <title>Fábio Coelho - Rei do Gado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
-    <h1>Bem-vindo ao site Rei do Gado!</h1>
+    <header class="header">
+        <h1>Fábio Coelho - Rei do Gado</h1>
+        <p class="datetime" id="datetime"></p>
+    </header>
+
+    <main class="main-content">
+        <section class="cattle-info">
+            <h2>Informações dos Gados</h2>
+            <form id="cattle-form">
+                <div class="form-group">
+                    <label for="cattle-id">Numeração do Boi:</label>
+                    <input type="number" id="cattle-id" min="0" max="999" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Peso (kg):</label>
+                    <input type="number" id="weight" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="breed">Raça do Boi:</label>
+                    <input type="text" id="breed" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Local de Criação:</label>
+                    <input type="text" id="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="feed">Alimentação (peso e preço):</label>
+                    <input type="text" id="feed" required>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Numeração</th>
+                        <th>Peso (kg)</th>
+                        <th>Arroba</th>
+                        <th>Raça</th>
+                        <th>Local</th>
+                        <th>Alimentação</th>
+                    </tr>
+                </thead>
+                <tbody id="cattle-data"></tbody>
+            </table>
+        </section>
+
+        <section class="market-info">
+            <h2>Cotação do Arroba</h2>
+            <div class="quote-container">
+                <p id="current-quote">Cotação agora: R$ <span>0.00</span></p>
+                <canvas id="quote-chart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Fábio Coelho - Rei do Gado</p>
+    </footer>
 </body>
 </html>
